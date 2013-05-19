@@ -8,3 +8,7 @@ group = 'com.moowork.gradle'
 dependencies {
     compile gradleApi()
 }
+
+task wrapper( type: Wrapper ) {
+    gradleVersion = '1.6'
+}
