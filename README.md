@@ -1,4 +1,3 @@
-
 Gradle plugin for Grunt
 =======================
 
@@ -11,3 +10,5 @@ Building the Plugin
 To build the pluign, just type the following commmand:
 
     ./gradlew clean build
+
+[![Build Status](https://drone.io/github.com/srs/gradle-grunt-plugin/status.png)](https://drone.io/github.com/srs/gradle-grunt-plugin/latest)
