@@ -2,7 +2,7 @@ apply plugin: 'idea'
 apply plugin: 'groovy'
 apply plugin: 'maven'
 
-version = '0.1-SNAPSHOT'
+version = '0.2-SNAPSHOT'
 group = 'com.moowork.gradle'
 
 dependencies {

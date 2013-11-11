@@ -4,12 +4,11 @@ import org.gradle.api.tasks.Exec
 
 class NpmInstallTask extends Exec
 {
-    public final static NAME = 'npmInstall';
-
     public NpmInstallTask( )
     {
-        setGroup( "Grunt" );
+        setGroup( "Npm" );
         setExecutable( "npm" );
+        setDescription( "Runs 'npm install' to install all packages declared in package.json" )
         setArgs( ["install"] as List );
         getInputs().file( "package.json" );
         getOutputs().dir( "node_modules" );
