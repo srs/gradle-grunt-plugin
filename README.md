@@ -87,4 +87,4 @@ To build the plugin, just type the following commmand:
 
     ./gradlew clean build
 
-[![Build Status](https://drone.io/github.com/tkruse/gradle-grunt-plugin/status.png)](https://drone.io/github.com/tkruse/gradle-grunt-plugin/latest)
+[![Build Status](https://drone.io/github.com/srs/gradle-grunt-plugin/status.png)](https://drone.io/github.com/srs/gradle-grunt-plugin/latest)
