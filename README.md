@@ -11,14 +11,14 @@ Installing the plugin
 Releases of this plugin are hosted at BinTray (http://bintray.com). Right now it's not part of jcentral
 repositry at BinTray, but will be very soon. Setup the plugin like this:
 
-buildscript {
-	maven {
-		url: 'http://dl.bintray.com/srs/maven'
+	buildscript {
+		maven {
+			url: 'http://dl.bintray.com/srs/maven'
+		}
+    	dependencies {
+			classpath 'com.moowork.gradle:gradle-grunt-plugin:0.2'
+    	}
 	}
-    dependencies {
-		classpath 'com.moowork.gradle:gradle-grunt-plugin:0.2'
-    }
-}
 
 Include the plugin in your build.gradle file like this:
 
