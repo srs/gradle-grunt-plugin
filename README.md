@@ -8,12 +8,12 @@ Grunt may either be installed globally, or locally using npm.
 Installing the plugin
 ---------------------
 
-Releases of this plugin are hosted at BinTray (http://bintray.com). Right now it's not part of jcentral
-repositry at BinTray, but will be very soon. Setup the plugin like this:
+Releases of this plugin are hosted at BinTray (http://bintray.com) and is part of jcentral repository.
+Setup the plugin like this:
 
 	buildscript {
-		maven {
-			url: 'http://dl.bintray.com/srs/maven'
+		repositories {
+			jcenter()
 		}
     	dependencies {
 			classpath 'com.moowork.gradle:gradle-grunt-plugin:0.2'
