@@ -8,14 +8,17 @@ Grunt may either be installed globally, or locally using npm.
 Installing the plugin
 ---------------------
 
-For now, you need to build the plugin yourself, then copy the jar into your
-project (e.g. subdirectory "buildLibs"), and refer to it like this:
+Releases of this plugin are hosted at BinTray (http://bintray.com). Right now it's not part of jcentral
+repositry at BinTray, but will be very soon. Setup the plugin like this:
 
-    buildscript {
-        dependencies {
-            classpath fileTree(dir: 'buildLibs', includes: ['gradle-grunt-plugin-0.2-SNAPSHOT.jar'])
-        }
+buildscript {
+	maven {
+		url: 'http://dl.bintray.com/srs/maven'
+	}
+    dependencies {
+		classpath 'com.moowork.gradle:gradle-grunt-plugin:0.2'
     }
+}
 
 Include the plugin in your build.gradle file like this:
 
