@@ -1,4 +1,4 @@
-Gradle plugin for Grunt
+Gradle plugin for Grunt [![Build Status](https://drone.io/github.com/srs/gradle-grunt-plugin/status.png)](https://drone.io/github.com/srs/gradle-grunt-plugin/latest)
 =======================
 
 This is a very simple Gradle plugin for running Grunt tasks part of the build.
@@ -90,4 +90,3 @@ To build the plugin, just type the following commmand:
 
     ./gradlew clean build
 
-[![Build Status](https://drone.io/github.com/srs/gradle-grunt-plugin/status.png)](https://drone.io/github.com/srs/gradle-grunt-plugin/latest)
