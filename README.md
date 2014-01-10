@@ -2,8 +2,8 @@ Gradle plugin for Grunt [![Build Status](https://drone.io/github.com/srs/gradle-
 =======================
 
 This is a very simple Gradle plugin for running Grunt tasks part of the build.
-It merely wraps calls to "grunt xyz" as "gradle grunt_xyz" tasks.
-Grunt may either be installed globally, or locally using npm.
+It merely wraps calls to "grunt xyz" as "gradle grunt_xyz" tasks. Grunt is installed locally using npm.
+
 
 Installing the plugin
 ---------------------
@@ -16,13 +16,15 @@ Setup the plugin like this:
 			jcenter()
 		}
     	dependencies {
-			classpath 'com.moowork.gradle:gradle-grunt-plugin:0.2'
+			classpath 'com.moowork.gradle:gradle-grunt-plugin:0.3'
     	}
 	}
 
 Include the plugin in your build.gradle file like this:
 
     apply plugin: 'grunt'
+
+The plugin will also apply grunt-node-plugin for Node and NPM related tasks. (see http://github/srs/grunt-node-plugin for details).
 
 Using the plugin
 ----------------
@@ -72,10 +74,29 @@ So as an example, you can make sure a local version of grunt exists using this:
 
     // makes sure on each build that grunt is installed
     grunt_build.dependsOn installGrunt
+
     // processes your package.json before running grunt build
     grunt_build.dependsOn npmInstall
+
     // runs "grunt build" as part of your gradle build
     build.dependsOn grunt_build
+
+
+Automatically downloading Node
+------------------------------
+
+To simplify the build, you can say that the plugin should donwload Node and NPM automatically. The dependent
+grunt-node-plugin does the magic (http://github.com/srs/grunt-node-plugin). Set this configuration to enable:
+
+    node {
+        // Version of node to use.
+        version = '0.10.22'
+
+        // Enabled the automatic download. False is the default (for now).
+        download = true
+    }
+
+Node will be installed in the .gradle folder for current user under nodejs subdirectory.
 
 
 Getting latest npm on Ubuntu

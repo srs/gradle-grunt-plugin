@@ -1,22 +1,20 @@
 package com.moowork.gradle.grunt
 
-import org.gradle.api.tasks.Exec
-import org.apache.tools.ant.taskdefs.condition.Os
+import com.moowork.gradle.node.task.NpmTask
 
-class GruntInstallTask extends Exec
+class GruntInstallTask
+    extends NpmTask
 {
-    public GruntInstallTask( )
+    public GruntInstallTask()
     {
-        setGroup( "Grunt" );
-        setDescription( "Runs 'npm install grunt-cli grunt' to install grunt-cli" )
-        if ( Os.isFamily( Os.FAMILY_WINDOWS ) ) {
-            setExecutable( "cmd" );
-            setArgs( ["/c", "npm", "install", "grunt-cli", "grunt"] as List );
-        } else {
-            setExecutable( "npm" );
-            setArgs( ["install", "grunt-cli", "grunt"] as List );
-        }
+        super()
 
-        getOutputs().dir( "node_modules/.bin/grunt" );
+        this.group = 'Grunt'
+        this.description = "Runs 'npm install grunt-cli grunt' to install grunt-cli"
+
+        setArgs( ['install', 'grunt-cli', 'grunt'] )
+
+        getOutputs().dir( 'node_modules/grunt' )
+        getOutputs().dir( 'node_modules/grunt-cli' )
     }
 }

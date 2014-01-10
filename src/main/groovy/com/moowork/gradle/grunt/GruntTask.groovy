@@ -1,34 +1,29 @@
 package com.moowork.gradle.grunt
 
-import org.apache.tools.ant.taskdefs.condition.Os
-import org.gradle.api.tasks.Exec
+import com.moowork.gradle.node.task.NodeTask
+import org.gradle.api.GradleException
 
-class GruntTask extends Exec
+class GruntTask
+    extends NodeTask
 {
+    private final static String GRUNT_SCRIPT = 'node_modules/grunt-cli/lib/cli.js';
 
-    public GruntTask( )
+    public GruntTask()
     {
-        setGroup( "Grunt" );
-        determineExecutable();
+        this.group = 'Grunt';
     }
 
-    private void determineExecutable( )
+    @Override
+    void exec()
     {
-        String gruntExec = "grunt";
-
-        File localGrunt = project.file( "node_modules/.bin/${gruntExec}" );
-        if ( ! localGrunt.isFile() )
+        def localGrunt = this.project.file( GRUNT_SCRIPT )
+        if ( !localGrunt.isFile() )
         {
-            String msg = "Grunt-CLI not installed in node_modules, please first run gradle ${GruntPlugin.GRUNT_INSTALL_NAME}"
-            logger.warn("WARNING: " + msg)
-            gruntExec = localGrunt.toString();
-            if ( Os.isFamily( Os.FAMILY_WINDOWS ) )
-            {
-                gruntExec = gruntExec + ".cmd";
-            }
+            throw new GradleException(
+                "Grunt-CLI not installed in node_modules, please first run 'gradle ${GruntPlugin.GRUNT_INSTALL_NAME}'" )
         }
-        setExecutable( gruntExec );
+
+        setScript( localGrunt )
+        super.exec()
     }
-
-
 }

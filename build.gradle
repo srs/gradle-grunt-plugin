@@ -1,53 +1,62 @@
-
 buildscript {
-	repositories {
-		maven { url 'http://jcenter.bintray.com' }
-	}
-		
-	dependencies {
-		classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:0.3'
-	}
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:0.3'
+    }
 }
 
-apply plugin: 'idea'
 apply plugin: 'groovy'
+apply plugin: 'maven'
 apply plugin: 'maven-publish'
 apply plugin: 'bintray'
 
 group = 'com.moowork.gradle'
 
+def compatibilityVersion = 1.7
+sourceCompatibility = compatibilityVersion
+targetCompatibility = compatibilityVersion
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
 dependencies {
     compile gradleApi()
+    compile 'com.moowork.gradle:gradle-node-plugin:0.3'
 }
 
-task sourcesJar(type: Jar) {
-	classifier 'sources'
-	from sourceSets.main.allSource
+task sourcesJar( type: Jar ) {
+    classifier 'sources'
+    from sourceSets.main.allSource
 }
 
-task groovydocJar(type: Jar, dependsOn: groovydoc) {
-	classifier 'groovydoc'
-	from groovydoc.destinationDir
+task groovydocJar( type: Jar ) {
+    classifier 'javadoc'
+    from groovydoc
 }
 
 artifacts {
-	archives sourcesJar
-	archives groovydocJar
+    archives sourcesJar
+    archives groovydocJar
 }
 
 publishing {
-	publications {
-		mavenJava(MavenPublication) {
-			from components.java
-			artifact sourcesJar
-			artifact groovydocJar
-		}
-	}
+    publications {
+        mavenJava( MavenPublication ) {
+            from components.java
+            artifact sourcesJar
+            artifact groovydocJar
+        }
+    }
 }
 
 bintray {
-    user = bintrayUser
-    key = bintrayKey
+    user = project.hasProperty( 'bintrayUser' ) ? project.getProperty( 'bintrayUser' ) : null
+    key = project.hasProperty( 'bintrayKey' ) ? project.getProperty( 'bintrayKey' ) : null
     publications = ['mavenJava']
 
     pkg {
