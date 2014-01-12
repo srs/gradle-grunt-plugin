@@ -16,7 +16,7 @@ Setup the plugin like this:
 			jcenter()
 		}
     	dependencies {
-			classpath 'com.moowork.gradle:gradle-grunt-plugin:0.3'
+			classpath 'com.moowork.gradle:gradle-grunt-plugin:0.4'
     	}
 	}
 
