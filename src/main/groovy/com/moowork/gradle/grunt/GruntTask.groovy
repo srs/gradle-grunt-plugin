@@ -6,7 +6,7 @@ import org.gradle.api.GradleException
 class GruntTask
     extends NodeTask
 {
-    private final static String GRUNT_SCRIPT = 'node_modules/grunt-cli/lib/cli.js';
+    private final static String GRUNT_SCRIPT = 'node_modules/grunt-cli/bin/grunt';
 
     public GruntTask()
     {
