@@ -86,7 +86,7 @@ Automatically downloading Node
 ------------------------------
 
 To simplify the build, you can say that the plugin should donwload Node and NPM automatically. The dependent
-grunt-node-plugin does the magic (http://github.com/srs/grunt-node-plugin). Set this configuration to enable:
+gradle-node-plugin does the magic (http://github.com/srs/gradle-node-plugin). Set this configuration to enable:
 
     node {
         // Version of node to use.
