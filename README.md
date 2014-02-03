@@ -73,10 +73,10 @@ deleting the node_modules folders.
 So as an example, you can make sure a local version of grunt exists using this:
 
     // makes sure on each build that grunt is installed
-    grunt_build.dependsOn installGrunt
+    grunt_build.dependsOn 'installGrunt'
 
     // processes your package.json before running grunt build
-    grunt_build.dependsOn npmInstall
+    grunt_build.dependsOn 'npmInstall'
 
     // runs "grunt build" as part of your gradle build
     build.dependsOn grunt_build
