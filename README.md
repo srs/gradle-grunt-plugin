@@ -47,7 +47,7 @@ Also (more importantly), you can depend on those tasks, e.g.
 This is the main advantage of this plugin, to allow build
 scripts (and grunt agnostics) to run grunt tasks via gradle.
 
-It is also possible to run a grunt task only if one of of its input files have changed:
+It is also possible to run a grunt task only if one of its input files have changed:
 
     def srcDir = new File(projectDir, "src/main/web")
     def targetDir = new File(project.buildDir, "web")
