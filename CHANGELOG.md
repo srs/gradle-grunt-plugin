@@ -21,8 +21,8 @@ Version 0.2 *(2013-11-24)*
 
 * Added license file
 * Publishing gradle-grunt-plugin to Bintray
-* Refactored plugin - using task rules and seperated npm into own task (tkruse)
-* Npm invocation now works on windows (tkruse)
+* Refactored plugin - using task rules and seperated npm into own task _(tkruse)_
+* Npm invocation now works on windows _(tkruse)_
 
 Version 0.1 *(2013-05-21)*
 --------------------------
