@@ -1,9 +1,14 @@
-Gradle plugin for Grunt [![Build Status](https://travis-ci.org/srs/gradle-grunt-plugin.png?branch=master)](https://travis-ci.org/srs/gradle-grunt-plugin) [![Download](https://api.bintray.com/packages/srs/maven/gradle-grunt-plugin/images/download.png)](https://bintray.com/srs/maven/gradle-grunt-plugin)
+Gradle plugin for Grunt
 =======================
 
 This is a very simple Gradle plugin for running Grunt tasks part of the build.
 It merely wraps calls to "grunt xyz" as "gradle grunt_xyz" tasks. Grunt is installed locally using npm.
 
+Status
+------
+
+* Build: [![Build Status](https://travis-ci.org/srs/gradle-grunt-plugin.png?branch=master)](https://travis-ci.org/srs/gradle-grunt-plugin)
+* Download: [![Download](https://api.bintray.com/packages/srs/maven/gradle-grunt-plugin/images/download.png)](https://bintray.com/srs/maven/gradle-grunt-plugin)
 
 Installing the plugin
 ---------------------

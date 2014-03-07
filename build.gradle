@@ -26,7 +26,7 @@ repositories {
 
 dependencies {
     compile gradleApi()
-    compile 'com.moowork.gradle:gradle-node-plugin:0.3'
+    compile 'com.moowork.gradle:gradle-node-plugin:0.4'
 }
 
 task sourcesJar( type: Jar ) {

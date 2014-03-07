@@ -4,7 +4,8 @@ Changelog
 Version 0.5 *(not released)*
 ----------------------------
 
-* ...
+* Updated gradle wrapper to version 1.11
+* Updated to gradle-node-plugin version 0.4
 
 Version 0.4 *(2014-01-12)*
 --------------------------
