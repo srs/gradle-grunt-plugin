@@ -14,13 +14,13 @@ class GruntPlugin
     void apply( final Project project )
     {
         project.plugins.apply( NodePlugin.class )
-        
+
         project.extensions.extraProperties.set( 'GruntTask', GruntTask.class )
         project.tasks.create( GRUNT_INSTALL_NAME, GruntInstallTask.class )
 
         // note this rule also makes it possible to specify e.g. "dependsOn grunt_install"
-        project.getTasks().addRule( "Pattern: grunt_<ID>" ) { String taskName ->
-            if ( taskName.startsWith( "grunt_" ) )
+        project.getTasks().addRule( 'Pattern: "grunt_<task>": Executes a named grunt task.' ) { String taskName ->
+            if ( taskName.startsWith( 'grunt_' ) )
             {
                 Task gruntTask = project.getTasks().create( taskName, GruntTask.class )
                 gruntTask.args = [( taskName - 'grunt_' )]

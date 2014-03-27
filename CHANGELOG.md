@@ -4,6 +4,7 @@ Changelog
 Version 0.6 *(not released)*
 ----------------------------
 
+* Added description for grunt task rule
 * ...
 
 Version 0.5 *(2014-03-08)*
