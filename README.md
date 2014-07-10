@@ -21,13 +21,13 @@ Setup the plugin like this:
 			jcenter()
 		}
     	dependencies {
-			classpath 'com.moowork.gradle:gradle-grunt-plugin:0.5'
+			classpath 'com.moowork.gradle:gradle-grunt-plugin:0.6'
     	}
 	}
 
 Include the plugin in your build.gradle file like this:
 
-    apply plugin: 'grunt'
+    apply plugin: 'com.moowork.grunt'
 
 The plugin will also apply grunt-node-plugin for Node and NPM related tasks. (see http://github/srs/grunt-node-plugin for details).
 

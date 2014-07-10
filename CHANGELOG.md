@@ -1,11 +1,17 @@
 Changelog
 =========
 
-Version 0.6 *(not released)*
+Version 0.7 *(not released)*
 ----------------------------
+
+* ...
+
+Version 0.6 *(2014-07-10)*
+--------------------------
 
 * Upgrade to Gradle 2.0
 * Upgrade to grunt-node-plugin 0.6
+* Using 'com.moowork.grunt' as plugin id, but 'grunt' still works for another version
 * Added description for grunt task rule
 
 Version 0.5 *(2014-03-08)*
