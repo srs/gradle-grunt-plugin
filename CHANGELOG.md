@@ -5,6 +5,7 @@ Version 0.6 *(not released)*
 ----------------------------
 
 * Upgrade to Gradle 2.0
+* Upgrade to grunt-node-plugin 0.6
 * Added description for grunt task rule
 
 Version 0.5 *(2014-03-08)*
