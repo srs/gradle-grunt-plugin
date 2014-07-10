@@ -4,14 +4,14 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:0.3'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:0.5'
     }
 }
 
 apply plugin: 'groovy'
 apply plugin: 'maven'
 apply plugin: 'maven-publish'
-apply plugin: 'bintray'
+apply plugin: 'com.jfrog.bintray'
 
 group = 'com.moowork.gradle'
 
@@ -57,11 +57,19 @@ publishing {
 bintray {
     user = project.hasProperty( 'bintrayUser' ) ? project.getProperty( 'bintrayUser' ) : null
     key = project.hasProperty( 'bintrayKey' ) ? project.getProperty( 'bintrayKey' ) : null
+
     publications = ['mavenJava']
+    publish = true
 
     pkg {
         repo = 'maven'
         name = 'gradle-grunt-plugin'
         licenses = ['Apache-2.0']
+        desc = 'Gradle pluign for executing grunt builds. '
+        websiteUrl = 'https://github.com/srs/gradle-grunt-plugin'
+        issueTrackerUrl = 'https://github.com/srs/gradle-grunt-plugin/issues'
+        vcsUrl = 'https://github.com/srs/gradle-grunt-plugin.git'
+        labels = ['java', 'gradle', 'groovy', 'grunt', 'node']
+        publicDownloadNumbers = true
     }
 }
