@@ -65,7 +65,7 @@ bintray {
         repo = 'maven'
         name = 'gradle-grunt-plugin'
         licenses = ['Apache-2.0']
-        desc = 'Gradle pluign for executing grunt builds. '
+        desc = 'Gradle plugin for executing grunt builds. '
         websiteUrl = 'https://github.com/srs/gradle-grunt-plugin'
         issueTrackerUrl = 'https://github.com/srs/gradle-grunt-plugin/issues'
         vcsUrl = 'https://github.com/srs/gradle-grunt-plugin.git'
