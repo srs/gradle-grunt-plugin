@@ -13,23 +13,23 @@ Status
 Installing the plugin
 ---------------------
 
-Releases of this plugin are hosted at BinTray (http://bintray.com) and is part of jcentral repository.
+Releases of this plugin are hosted at BinTray (http://bintray.com) and is part of jcenter repository.
 Setup the plugin like this:
 
 	buildscript {
 		repositories {
 			jcenter()
 		}
-    	dependencies {
+		dependencies {
 			classpath 'com.moowork.gradle:gradle-grunt-plugin:0.6'
-    	}
+		}
 	}
 
 Include the plugin in your build.gradle file like this:
 
     apply plugin: 'com.moowork.grunt'
 
-The plugin will also apply grunt-node-plugin for Node and NPM related tasks. (see http://github/srs/grunt-node-plugin for details).
+The plugin will also apply gradle-node-plugin for Node and NPM related tasks. (see http://github/srs/grunt-node-plugin for details).
 
 Using the plugin
 ----------------
@@ -97,7 +97,7 @@ So as an example, you can make sure a local version of grunt exists using this:
 Automatically downloading Node
 ------------------------------
 
-To simplify the build, you can say that the plugin should donwload Node and NPM automatically. The dependent
+To simplify the build, you can say that the plugin should download Node and NPM automatically. The dependent
 gradle-node-plugin does the magic (http://github.com/srs/gradle-node-plugin). Set this configuration to enable:
 
     node {
@@ -119,7 +119,7 @@ See https://github.com/creationix/nvm on how to install npm via nvm.
 Building the Plugin
 -------------------
 
-To build the plugin, just type the following commmand:
+To build the plugin, just type the following command:
 
     ./gradlew clean build
 
