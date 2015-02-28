@@ -7,6 +7,7 @@ Version 0.7 *(not released)*
 * Upgrade to Gradle wrapper 2.3
 * Publishing snapshots to jcenter (oss.jfrog.org)
 * Using gradle-node-plugin version 0.9
+* Compiling using Java 1.6 compatiblity
 * ...
 
 Version 0.6 *(2014-07-10)*
