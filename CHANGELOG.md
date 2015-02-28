@@ -1,9 +1,10 @@
 Changelog
 =========
 
-Version 0.7 *(not released)*
+Version 0.9 *(not released)*
 ----------------------------
 
+* Align version number with node plugin
 * Upgrade to Gradle wrapper 2.3
 * Publishing snapshots to jcenter (oss.jfrog.org)
 * Using gradle-node-plugin version 0.9
