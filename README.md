@@ -1,30 +1,43 @@
 Gradle plugin for Grunt
 =======================
 
+[![Build Status](http://goo.gl/34ORZs)](http://goo.gl/hCq36K)
+[![Download](http://goo.gl/oTlPq6)](http://goo.gl/Pn5lEW)
+[![License](http://goo.gl/MMfZhl)](http://goo.gl/D6iAcM)
+
 This is a very simple Gradle plugin for running Grunt tasks part of the build.
 It merely wraps calls to "grunt xyz" as "gradle grunt_xyz" tasks. Grunt is installed locally using npm.
-
-Status
-------
-
-* Build: [![Build Status](https://travis-ci.org/srs/gradle-grunt-plugin.png?branch=master)](https://travis-ci.org/srs/gradle-grunt-plugin)
-* Download: [![Download](https://api.bintray.com/packages/srs/maven/gradle-grunt-plugin/images/download.png)](https://bintray.com/srs/maven/gradle-grunt-plugin)
-* License: [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 Installing the plugin
 ---------------------
 
-Releases of this plugin are hosted at BinTray (http://bintray.com) and is part of jcenter repository.
+Releases of this plugin are hosted at Bintray and is part of the jCenter repository. Development builds are published
+for every commit to the master branch. These SNAPSHOTs are hosted on the OJO repository and to use them you
+will need to add OJO to your buildscript configuration.
+
 Setup the plugin like this:
 
-	buildscript {
-		repositories {
-			jcenter()
-		}
-		dependencies {
-			classpath 'com.moowork.gradle:gradle-grunt-plugin:0.6'
-		}
-	}
+    plugins {
+        id "com.moowork.grunt" version "0.6"
+    }
+
+Or using the old (pre 2.1) way:
+
+    buildscript {
+        repositories {
+            jcenter()
+
+            // If you want to use a SNAPSHOT build, add the OJO repository:
+            maven {
+                name 'JFrog OSS snapshot repo'
+                url  'https://oss.jfrog.org/oss-snapshot-local/'
+            }
+        }
+
+        dependencies {
+            classpath 'com.moowork.gradle:gradle-grunt-plugin:0.6'
+        }
+    }
 
 Include the plugin in your build.gradle file like this:
 
