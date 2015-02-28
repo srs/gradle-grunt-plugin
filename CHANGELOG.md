@@ -6,7 +6,7 @@ Version 0.7 *(not released)*
 
 * Upgrade to Gradle 2.1
 * Publishing snapshots to jcenter (oss.jfrog.org)
-* Using gradle-node-plugin version 0.7
+* Using gradle-node-plugin version 0.9
 * ...
 
 Version 0.6 *(2014-07-10)*
