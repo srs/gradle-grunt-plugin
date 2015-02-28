@@ -1,8 +1,13 @@
 Changelog
 =========
 
-Version 0.9 *(not released)*
-----------------------------
+Version 0.10 *(not released)*
+-----------------------------
+
+* ...
+
+Version 0.9 *(2015-02-28)*
+--------------------------
 
 * Align version number with node plugin
 * Upgrade to Gradle wrapper 2.3
@@ -10,7 +15,6 @@ Version 0.9 *(not released)*
 * Using gradle-node-plugin version 0.9
 * Compiling using Java 1.6 compatiblity
 * Removed old plugin id 'grunt'
-* ...
 
 Version 0.6 *(2014-07-10)*
 --------------------------
