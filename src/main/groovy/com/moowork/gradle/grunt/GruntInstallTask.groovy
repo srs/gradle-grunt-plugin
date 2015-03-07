@@ -14,7 +14,9 @@ class GruntInstallTask
 
         setArgs( ['install', 'grunt-cli', 'grunt'] )
 
-        getOutputs().dir( 'node_modules/grunt' )
-        getOutputs().dir( 'node_modules/grunt-cli' )
+        this.project.afterEvaluate {
+            getOutputs().dir( new File( this.project.node.nodeModulesDir, 'node_modules/grunt' ) )
+            getOutputs().dir( new File( this.project.node.nodeModulesDir, 'node_modules/grunt-cli' ) )
+        }
     }
 }
