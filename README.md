@@ -115,6 +115,12 @@ You can configure the plugin using the "grunt" extension block, like this:
     grunt {
         // Set the directory where Gruntfile.js should be found
         workDir = file("${project.projectDir}")
+
+        // Whether colors should output on the terminal
+        colors = true
+
+        // Whether output from Grunt should be buffered - useful when running tasks in parallel
+        bufferOutput = false
     }
 
 Automatically downloading Node

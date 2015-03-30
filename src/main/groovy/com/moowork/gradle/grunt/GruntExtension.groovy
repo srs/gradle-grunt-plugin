@@ -6,7 +6,11 @@ class GruntExtension
 {
     final static String NAME = 'grunt'
 
-    def File workDir
+    File workDir
+
+    Boolean colors = true
+
+    Boolean bufferOutput = false
 
     GruntExtension( final Project project )
     {
