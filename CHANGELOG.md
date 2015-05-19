@@ -6,6 +6,8 @@ Version 0.10 *(not released)*
 
 * Upgraded wrapper to use Gradle 2.4
 * Using gradle-node-plugin version 0.10
+* Add configuration for where Gruntfile.js is located _(nmalaguti)_
+* Added basic unit tests _(nmalaguti)_
 * ...
 
 Version 0.9 *(2015-02-28)*
