@@ -8,6 +8,7 @@ Version 0.10 *(not released)*
 * Using gradle-node-plugin version 0.10
 * Add configuration for where Gruntfile.js is located _(nmalaguti)_
 * Added basic unit tests _(nmalaguti)_
+* Added support to buffer output and disable colors _(nmalaguti)_
 * ...
 
 Version 0.9 *(2015-02-28)*
