@@ -26,9 +26,8 @@ repositories {
 }
 
 dependencies {
-    compile gradleApi()
-    testCompile( 'org.spockframework:spock-core:0.7-groovy-2.0' ) {
-        exclude module: 'groovy-all'
+    testCompile("com.netflix.nebula:nebula-test:2.2.0") {
+        exclude group: "org.codehaus.groovy", module: "groovy-all"
     }
     compile 'com.moowork.gradle:gradle-node-plugin:0.10'
 }
