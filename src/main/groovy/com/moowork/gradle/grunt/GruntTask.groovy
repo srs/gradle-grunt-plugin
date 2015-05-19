@@ -23,8 +23,36 @@ class GruntTask
                 "Grunt-CLI not installed in node_modules, please first run 'gradle ${GruntPlugin.GRUNT_INSTALL_NAME}'" )
         }
 
+        // If colors are disabled, add --no-color to args
+        if ( !this.project.grunt.colors ) {
+            def tempArgs = []
+            tempArgs.addAll( args as List )
+            tempArgs.add( '--no-color' )
+            setArgs( tempArgs )
+        }
+
+        // If output should be buffered (useful when running in parallel)
+        // set standardOutput of ExecRunner to a buffer
+        def bufferedOutput
+        if ( this.project.grunt.bufferOutput ) {
+            bufferedOutput = new ByteArrayOutputStream()
+            setExecOverrides({
+                it.standardOutput = bufferedOutput
+            })
+        }
+
         setWorkingDir( this.project.grunt.workDir )
         setScript( localGrunt )
-        super.exec()
+
+        // If the exec fails, make sure to still print output
+        try {
+            super.exec()
+        } finally {
+            // If we were buffering output, print it
+            if ( this.project.grunt.bufferOutput ) {
+                println "Output from ${this.project.grunt.workDir}/Gruntfile.js"
+                println bufferedOutput.toString()
+            }
+        }
     }
 }
