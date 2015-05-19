@@ -5,6 +5,7 @@ Version 0.10 *(not released)*
 -----------------------------
 
 * Upgraded wrapper to use Gradle 2.4
+* Using gradle-node-plugin version 0.10
 * ...
 
 Version 0.9 *(2015-02-28)*

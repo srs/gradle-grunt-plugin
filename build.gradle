@@ -30,7 +30,7 @@ dependencies {
     testCompile( 'org.spockframework:spock-core:0.7-groovy-2.0' ) {
         exclude module: 'groovy-all'
     }
-    compile 'com.moowork.gradle:gradle-node-plugin:0.9'
+    compile 'com.moowork.gradle:gradle-node-plugin:0.10'
 }
 
 task sourcesJar( type: Jar ) {
