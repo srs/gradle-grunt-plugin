@@ -107,6 +107,15 @@ So as an example, you can make sure a local version of grunt exists using this:
     // runs "grunt build" as part of your gradle build
     build.dependsOn grunt_build
 
+Configuring the Plugin
+----------------------
+
+You can configure the plugin using the "grunt" extension block, like this:
+
+    grunt {
+        // Set the directory where Gruntfile.js should be found
+        workDir = file("${project.projectDir}")
+    }
 
 Automatically downloading Node
 ------------------------------
