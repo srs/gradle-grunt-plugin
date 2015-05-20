@@ -18,7 +18,7 @@ will need to add OJO to your buildscript configuration.
 Setup the plugin like this:
 
     plugins {
-        id "com.moowork.grunt" version "0.9"
+        id "com.moowork.grunt" version "0.10"
     }
 
 Or using the old (pre 2.1) way:
@@ -35,7 +35,7 @@ Or using the old (pre 2.1) way:
         }
 
         dependencies {
-            classpath 'com.moowork.gradle:gradle-grunt-plugin:0.9'
+            classpath 'com.moowork.gradle:gradle-grunt-plugin:0.10'
         }
     }
 
