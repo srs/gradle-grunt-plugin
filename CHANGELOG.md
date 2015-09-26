@@ -1,10 +1,16 @@
 Changelog
 =========
 
-Version 0.11 *(not released)*
+Version 0.12 *(not released)*
 -----------------------------
 
 * ...
+
+Version 0.11 *(2015-09-26)*
+---------------------------
+
+* Upgraded wrapper to use Gradle 2.7
+* Using gradle-node-plugin version 0.11
 
 Version 0.10 *(2015-05-19)*
 ---------------------------
@@ -61,4 +67,3 @@ Version 0.1 *(2013-05-21)*
 --------------------------
 
 * Initial version
-

@@ -18,32 +18,27 @@ will need to add OJO to your buildscript configuration.
 Setup the plugin like this:
 
     plugins {
-        id "com.moowork.grunt" version "0.10"
+      id "com.moowork.grunt" version "0.11"
     }
 
-Or using the old (pre 2.1) way:
+Or:
 
     buildscript {
-        repositories {
-            jcenter()
-
-            // If you want to use a SNAPSHOT build, add the OJO repository:
-            maven {
-                name 'JFrog OSS snapshot repo'
-                url  'https://oss.jfrog.org/oss-snapshot-local/'
-            }
+      repositories {
+        maven {
+          url "https://plugins.gradle.org/m2/"
         }
+      }
 
-        dependencies {
-            classpath 'com.moowork.gradle:gradle-grunt-plugin:0.10'
-        }
+      dependencies {
+        classpath 'com.moowork.gradle:gradle-grunt-plugin:0.11'
+      }
     }
-
-Include the plugin in your build.gradle file like this:
 
     apply plugin: 'com.moowork.grunt'
 
-The plugin will also apply gradle-node-plugin for Node and NPM related tasks. (see http://github/srs/grunt-node-plugin for details).
+The plugin will also apply gradle-node-plugin for Node and NPM related tasks.
+(see http://github/srs/grunt-node-plugin for details).
 
 Using the plugin
 ----------------
@@ -151,4 +146,3 @@ Building the Plugin
 To build the plugin, just type the following command:
 
     ./gradlew clean build
-
