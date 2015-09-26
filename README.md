@@ -5,6 +5,9 @@ Gradle plugin for Grunt
 [![Download](http://goo.gl/oTlPq6)](http://goo.gl/Pn5lEW)
 [![License](http://goo.gl/MMfZhl)](http://goo.gl/D6iAcM)
 
+**NOTE:** Next version of this plugin will merge with the [Node](https://github.com/srs/gradle-node-plugin) and 
+[Gulp](https://github.com/srs/gradle-gulp-plugin) plugins.    
+
 This is a very simple Gradle plugin for running Grunt tasks part of the build.
 It merely wraps calls to "grunt xyz" as "gradle grunt_xyz" tasks. Grunt is installed locally using npm.
 
