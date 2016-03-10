@@ -5,3 +5,8 @@ jdk:
 - oraclejdk7
 
 script: ./gradlew ci
+
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
