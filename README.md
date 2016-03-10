@@ -3,7 +3,7 @@ Gradle plugin for Grunt
 
 [![Build Status](https://travis-ci.org/srs/gradle-grunt-plugin.svg?branch=master)](https://travis-ci.org/srs/gradle-grunt-plugin)
 [![Windows Build status](https://ci.appveyor.com/api/projects/status/52x9jkqw6gtp5th0?svg=true)](https://ci.appveyor.com/project/srs/gradle-grunt-plugin)
-[![Coverage Status](https://coveralls.io/repos/srs/gradle-grunt-plugin/badge.svg?branch=master&service=github)](https://coveralls.io/github/srs/gradle-grunt-plugin?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/srs/gradle-grunt-plugin/badge.svg?branch=master)](https://coveralls.io/github/srs/gradle-grunt-plugin?branch=master)
 [![License](https://img.shields.io/github/license/srs/gradle-grunt-plugin.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 [![Download](https://img.shields.io/bintray/v/srs/maven/gradle-grunt-plugin.svg)](https://bintray.com/srs/maven/gradle-grunt-plugin)
 
