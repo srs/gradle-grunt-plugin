@@ -7,6 +7,7 @@ Version 0.12 *(not released)*
 * Upgraded wrapper to use Gradle 2.11
 * Using gradle-node-plugin version 0.12
 * Added more tests and integration tests
+
 * ...
 
 Version 0.11 *(2015-09-26)*
