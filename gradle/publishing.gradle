@@ -1,0 +1,74 @@
+apply plugin: 'maven'
+apply plugin: 'maven-publish'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.jfrog.artifactory'
+
+ext {
+    bintrayUser = resolveProperty( 'BINTRAY_USER', 'bintrayUser' )
+    bintrayKey = resolveProperty( 'BINTRAY_KEY', 'bintrayKey' )
+}
+
+publishing {
+    publications {
+        mavenJava( MavenPublication ) {
+            from components.java
+            artifact sourcesJar
+            artifact groovydocJar
+            artifact javadocJar
+        }
+    }
+}
+
+bintray {
+    user = bintrayUser
+    key = bintrayKey
+    publications = ['mavenJava']
+
+    pkg {
+        repo = 'maven'
+        name = 'gradle-grunt-plugin'
+        licenses = ['Apache-2.0']
+        desc = 'Gradle plugin for executing grunt builds. '
+        websiteUrl = 'https://github.com/srs/gradle-grunt-plugin'
+        issueTrackerUrl = 'https://github.com/srs/gradle-grunt-plugin/issues'
+        vcsUrl = 'https://github.com/srs/gradle-grunt-plugin.git'
+        labels = ['java', 'gradle', 'groovy', 'grunt', 'node']
+        publicDownloadNumbers = true
+
+        version {
+            vcsTag = "v$project.version"
+            attributes = ['gradle-plugin': ["com.moowork.grunt:${project.group}:${project.name}"]]
+        }
+    }
+}
+
+artifactoryPublish {
+    onlyIf { isMaster }
+    mustRunAfter 'build'
+    publications 'mavenJava'
+}
+
+artifactory {
+    contextUrl = 'https://oss.jfrog.org'
+
+    publish {
+        repository {
+            repoKey = 'oss-snapshot-local'
+            username = bintrayUser
+            password = bintrayKey
+            maven = true
+        }
+    }
+}
+
+String resolveProperty( String envVarKey, String projectPropKey )
+{
+    String propValue = System.getenv()[envVarKey]
+
+    if ( propValue )
+    {
+        return propValue
+    }
+
+    hasProperty( projectPropKey ) ? getProperty( projectPropKey ) : null
+}
