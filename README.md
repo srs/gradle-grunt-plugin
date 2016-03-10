@@ -1,9 +1,10 @@
 Gradle plugin for Grunt
 =======================
 
-[![Build Status](http://goo.gl/34ORZs)](http://goo.gl/hCq36K)
-[![Download](http://goo.gl/oTlPq6)](http://goo.gl/Pn5lEW)
-[![License](http://goo.gl/MMfZhl)](http://goo.gl/D6iAcM)
+[![Build Status](https://travis-ci.org/srs/gradle-grunt-plugin.svg?branch=master)](https://travis-ci.org/srs/gradle-grunt-plugin)
+[![Coverage Status](https://coveralls.io/repos/srs/gradle-grunt-plugin/badge.svg?branch=master&service=github)](https://coveralls.io/github/srs/gradle-grunt-plugin?branch=master)
+[![License](https://img.shields.io/github/license/srs/gradle-grunt-plugin.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
+[![Download](https://img.shields.io/bintray/v/srs/maven/gradle-grunt-plugin.svg)](https://bintray.com/srs/maven/gradle-grunt-plugin)
 
 This is a very simple Gradle plugin for running Grunt tasks part of the build.
 It merely wraps calls to "grunt xyz" as "gradle grunt_xyz" tasks. Grunt is installed locally using npm.
