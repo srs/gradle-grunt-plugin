@@ -4,6 +4,9 @@ Changelog
 Version 0.13 *(not released)*
 -----------------------------
 
+* Bumped gradle wrapper version to 2.14
+* Updated plugin versions and test versions
+* Using gradle-node-plugin version 0.13
 * ...
 
 Version 0.12 *(2016-03-10)*
