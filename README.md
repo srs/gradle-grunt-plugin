@@ -21,6 +21,7 @@ Setup the plugin like this:
 
     plugins {
       id "com.moowork.grunt" version "0.13"
+      id "com.moowork.node" version "0.13"
     }
 
 Or:
