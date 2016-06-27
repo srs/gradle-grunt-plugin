@@ -1,14 +1,18 @@
 Changelog
 =========
 
-Version 0.13 *(not released)*
+Version 0.14 *(not released)*
 -----------------------------
+
+* ...
+
+Version 0.13 *(2016-06-27)*
+---------------------------
 
 * Bumped gradle wrapper version to 2.14
 * Updated plugin versions and test versions
 * Using gradle-node-plugin version 0.13
 * Fix multi gradle project Gruntfile.js location _(mhmxs)_
-* ...
 
 Version 0.12 *(2016-03-10)*
 ---------------------------
