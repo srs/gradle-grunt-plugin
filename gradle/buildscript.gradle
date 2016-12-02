@@ -1,9 +1,0 @@
-repositories {
-    jcenter()
-}
-
-dependencies {
-    classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6'
-    classpath 'org.jfrog.buildinfo:build-info-extractor-gradle:4.4.0'
-    classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.6.3'
-}
